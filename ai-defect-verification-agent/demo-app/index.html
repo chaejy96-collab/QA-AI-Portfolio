@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile demo</title>
+  </head>
+  <body>
+    <main>
+      <h1>Profile</h1>
+      <form data-testid="profile-form">
+        <label>
+          Name
+          <input data-testid="profile-name" name="name" required />
+        </label>
+        <button data-testid="save-profile" type="submit">Save profile</button>
+      </form>
+      <p aria-live="polite" data-testid="save-status"></p>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

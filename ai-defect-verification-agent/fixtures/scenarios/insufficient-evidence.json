@@ -1,0 +1,8 @@
+{
+  "issuePath": "fixtures/jira/QADEMO-103-insufficient-evidence.json",
+  "diffPath": "fixtures/pull-requests/QADEMO-101.diff",
+  "reviewPath": "fixtures/reviews/QADEMO-103.synthetic-review.json",
+  "criteriaPath": "기준.md",
+  "testFile": "tests/e2e/insufficient-evidence.spec.mjs",
+  "repeatCount": 1
+}

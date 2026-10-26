@@ -1,0 +1,11 @@
+{
+  "source": "synthetic-review-fixture",
+  "isLiveOpusReview": false,
+  "verdict": "approved",
+  "blockingFindings": [],
+  "notes": [
+    "C1과 C2를 직접 확인하는 관찰값이 있는지 확인한다.",
+    "C3에 정의된 증거 종류가 모두 있는지 확인한다.",
+    "이 fixture는 실제 Opus 호출 또는 실제 독립 검토 결과가 아니다."
+  ]
+}

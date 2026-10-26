@@ -1,0 +1,12 @@
+{
+  "key": "QADEMO-104",
+  "summary": "자동화 실행 실패 시 제품 수정 여부를 판단하지 않음",
+  "synthetic": true,
+  "reproductionSteps": [
+    "프로필 페이지를 연다.",
+    "자동화 실행이 중단되는 환경을 시뮬레이션한다."
+  ],
+  "expectedResult": "실행이 완료되지 않으면 수정 여부를 판단하지 않고 실행 실패로 기록한다.",
+  "targetVersion": "demo-execution-failure-1.0.0",
+  "requiredCriteria": ["C1", "C2", "C3"]
+}

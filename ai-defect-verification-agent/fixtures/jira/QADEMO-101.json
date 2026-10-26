@@ -1,0 +1,13 @@
+{
+  "key": "QADEMO-101",
+  "summary": "프로필 저장 후 성공 메시지가 표시되지 않음",
+  "synthetic": true,
+  "reproductionSteps": [
+    "프로필 페이지를 연다.",
+    "이름을 입력한다.",
+    "Save profile 버튼을 선택한다."
+  ],
+  "expectedResult": "저장이 성공하면 Profile saved 메시지가 보이고, 저장 API는 HTTP 200을 반환한다.",
+  "targetVersion": "demo-fixed-1.0.0",
+  "requiredCriteria": ["C1", "C2", "C3"]
+}

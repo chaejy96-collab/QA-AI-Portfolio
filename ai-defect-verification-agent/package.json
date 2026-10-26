@@ -1,0 +1,17 @@
+{
+  "name": "ai-defect-verification-agent-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Synthetic, local-only portfolio demo for AI-assisted defect verification.",
+  "scripts": {
+    "demo": "node src/run-demo.mjs",
+    "test": "node --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
+    "test:integration": "node --test tests/integration/*.test.mjs",
+    "test:e2e": "playwright test tests/e2e/verify-fixed.spec.mjs --repeat-each=2",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0"
+  }
+}

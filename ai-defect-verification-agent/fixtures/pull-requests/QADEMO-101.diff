@@ -1,0 +1,13 @@
+diff --git a/demo-app/app.js b/demo-app/app.js
+index 2f3c9b1..8a1d447 100644
+--- a/demo-app/app.js
++++ b/demo-app/app.js
+@@ -8,6 +8,9 @@ form.addEventListener('submit', async (event) => {
+   const response = await fetch('/api/profile', { method: 'POST' });
+   if (response.ok) {
++    status.textContent = 'Profile saved';
++    status.dataset.state = 'success';
++    return;
+   }
+   status.textContent = 'Unable to save profile';
+ });

@@ -1,0 +1,7 @@
+{
+  "source": "synthetic-review-fixture",
+  "isLiveOpusReview": false,
+  "verdict": "approved",
+  "blockingFindings": [],
+  "notes": ["이 fixture는 실제 Opus 호출 또는 실제 독립 검토 결과가 아니다."]
+}
