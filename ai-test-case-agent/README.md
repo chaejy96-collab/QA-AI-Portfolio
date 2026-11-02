@@ -18,8 +18,13 @@ Main Orchestrator
   └─ XLSX build         검증 통과 시에만 생성
 ```
 
-중요한 경계는 다음과 같습니다.
+## 도구 전략 (Tooling Strategy)
+- **Figma**: 디자인 사양 추출을 위해 Figma MCP를 기본 사용하며, 데이터 제한 시 REST API로 자동 폴백되는 가용성 확보 구조.
+- **TC 설계 기준**: 요구사항(Markdown)과 기존 TC(JSON)를 읽기 전용으로 분석하여 설계 논리의 일관성 유지.
+- **Fail-fast 게이트**: 모든 API 쓰기 작업 전 구조 및 무결성 검증을 수행하여 잘못된 산출물 생성을 차단.
 
+중요한 경계는 다음과 같습니다.
+...
 - Survey와 Audit은 서로 다른 workspace 결과를 만든다.
 - Write Agent는 Figma를 직접 다시 읽지 않고 승인된 frozen criteria만 사용한다.
 - 근거가 부족한 항목은 임의로 TC를 만들지 않고 `확인 필요`로 남긴다.

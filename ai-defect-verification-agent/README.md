@@ -18,8 +18,13 @@ Playwright 테스트가 통과했다는 사실만으로 결함 수정 완료를 
 6. 최초 판단과 합성 독립 검토 fixture를 대조한다.
 7. `artifacts/final-report.md`와 JSON 보고서를 만든다.
 
-## 새 환경에서 실행
+## 도구 및 보고 전략 (Tooling & Reporting Strategy)
+- **Jira(Atlassian MCP)**: 티켓 본문 및 댓글 분석을 통해 결함 맥락(Context)을 파악하고, 검증 완료 시 REST API로 상세 리포트 및 증거(첨부)를 자동 반영.
+- **GitHub/Playwright**: 변경점 분석은 Read-only(View Diff)로, 실행은 표준화된 CLI 명령으로 독립성 유지.
+- **안전장치(Safety Mechanisms)**: 실제 반영 전 결과 무결성 검증 및 Dry-run 모드를 통한 리포트 사전 출력, 최소 권한 기반의 API 토큰 사용.
 
+## 새 환경에서 실행
+...
 Node.js 20 이상을 권장합니다.
 
 ```bash
