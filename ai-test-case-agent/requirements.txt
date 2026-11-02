@@ -1,0 +1,2 @@
+# Runtime pipeline uses Python standard library only.
+# XLSX generation uses the execution environment's @oai/artifact-tool runtime.

@@ -1,0 +1,7 @@
+{
+  "approved": true,
+  "approval_type": "synthetic_human_gate",
+  "approver_role": "QA reviewer (synthetic)",
+  "approved_criteria": ["AC-01", "AC-02", "AC-03", "AC-04"],
+  "notes": "The criteria are frozen for the portfolio demo. This is not a real company approval record."
+}

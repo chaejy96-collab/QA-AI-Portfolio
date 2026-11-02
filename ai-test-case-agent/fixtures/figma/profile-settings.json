@@ -1,0 +1,22 @@
+{
+  "source_type": "synthetic_figma_export",
+  "file_id": "SYNTHETIC-FIGMA-PROFILE-001",
+  "file_name": "Synthetic Profile Settings",
+  "pages": [
+    {
+      "name": "Profile",
+      "frames": [
+        {
+          "id": "frame-profile-edit",
+          "name": "Edit profile",
+          "components": [
+            {"id": "input-display-name", "type": "input", "label": "Display name", "required": true},
+            {"id": "button-save", "type": "button", "label": "Save", "states": ["enabled", "loading", "disabled"]},
+            {"id": "toast-success", "type": "message", "text": "Profile saved", "visibility": "after-success"},
+            {"id": "inline-error", "type": "message", "text": "Unable to save profile", "visibility": "after-error"}
+          ]
+        }
+      ]
+    }
+  ]
+}
