@@ -34,6 +34,20 @@ Figma / 요구사항 / 기존 TC
 - Validation Agent는 근거 참조, 필수 필드, 확인 필요 표시, 중복과 모순을 검사한다.
 - QA Senior Agent는 테스트 관점의 누락·중복·우선순위를 최종 검토한다.
 
+## 1. 도구 전략 (Tooling Strategy)
+- **Figma**: Figma MCP를 사용하여 디자인 사양을 읽고, API 한도 부족 시 Figma REST API로 우회하여 자동화 가용성을 확보함.
+- **Jira (Atlassian MCP)**: 이슈 본문과 댓글을 결합 분석하여 수정 방향과 히스토리를 정밀 추적.
+- **GitHub**: Diff 분석을 위한 최소한의 Read-only 권한만 활용.
+- **Playwright**: `npx playwright test` 명령을 활용하여 검증 실행의 표준성과 독립성 유지.
+
+## 2. 회귀 결과 보고 전략 (Regression Reporting Strategy)
+- **Jira 통합**: 최종 검증 결과(첨부 파일, 상세 댓글, 상태 변경)는 Jira REST API를 통해 안전하게 반영.
+- **안전장치 (Safety Mechanisms)**:
+    - **Human-in-the-loop**: 민감한 상태 변경은 사람의 승인 혹은 최종 확인 후 실행.
+    - **Dry-run Mode**: 모든 API 쓰기 작업 전 시뮬레이션 모드를 기본값으로 설정.
+    - **구조 검증**: API 호출 전 작성될 리포트의 구조와 내용을 최종 검증하여 무결성 보장.
+    - **최소 권한**: API Key는 필요한 최소 범위의 권한만을 할당하여 위험 최소화.
+
 ## 현재 데모의 실행 단위
 
 현재 데모는 하나의 합성 프로필 설정 기능을 사용한다. agent별 결과는 `artifacts/demo/workspaces/<agent>/`에 분리 저장된다. 사람이 승인했다는 사실은 합성 approval fixture로 표현하며, 실제 사람이나 실제 회사 승인 기록이 아니다.
